@@ -431,3 +431,106 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 48px;
+  background: #122238;
+  color: #dfe7ee;
+}
+
+.contact h2 {
+  color: #ffffff;
+}
+
+.contact .eyebrow {
+  color: #b4dbd3;
+}
+
+.contact-details {
+  margin-top: 32px;
+  overflow-wrap: anywhere;
+}
+
+.quote-form {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+  padding: 28px;
+  background: #ffffff;
+  color: #122238;
+  border-radius: 12px;
+}
+
+.quote-form h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.form-note {
+  margin: 0;
+  color: #5b6575;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.form-field label {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #8c99ad;
+  border-radius: 6px;
+  background: #f7f8f6;
+  color: inherit;
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid #2d7f7a;
+  outline-offset: 2px;
+}
+
+.quote-submit {
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: #122238;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.quote-submit:disabled {
+  background: #d9dee7;
+  color: #5b6575;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
