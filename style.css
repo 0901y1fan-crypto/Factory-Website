@@ -98,6 +98,19 @@ a {
 
 .hero {
   min-height: 660px;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(247, 248, 246, 0.96) 0%,
+      rgba(247, 248, 246, 0.84) 36%,
+      rgba(247, 248, 246, 0.2) 72%
+    ),
+    url("FactoryPics/testimage.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
