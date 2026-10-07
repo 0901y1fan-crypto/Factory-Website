@@ -228,3 +228,15 @@ a {
   font-size: 14px;
   line-height: 1.7;
 }
+
+@media (max-width: 980px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
