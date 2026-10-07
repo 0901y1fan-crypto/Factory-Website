@@ -172,3 +172,59 @@ a {
   color: #122238;
   border: 1px solid #d9dee7;
 }
+
+.section {
+  padding: 80px clamp(20px, 5vw, 72px);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 32px;
+  color: #5b6575;
+}
+
+.section h2 {
+  margin: 0;
+  margin-bottom: 16px;
+  color: #122238;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.service-card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #d9dee7;
+  border-radius: 12px;
+}
+
+.service-number {
+  display: block;
+  margin-bottom: 20px;
+  color: #2d7f7a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.service-card h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  color: #122238;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.service-card p {
+  margin: 0;
+  color: #5b6575;
+  font-size: 14px;
+  line-height: 1.7;
+}
