@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background: #f7f8f6;
+  color: #111827;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9dee7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+  background: #122238;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.brand strong {
+  font-size: 15px;
+}
+
+.brand small {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b6575;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #253349;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.quote-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 20px;
+  background: #122238;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 750;
+}
