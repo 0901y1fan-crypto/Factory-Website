@@ -19,7 +19,23 @@
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav
+        id="primary-navigation"
+        class="nav-links"
+        aria-label="Primary navigation"
+      >
         <a href="#services">Services</a>
         <a href="#factory">Factory</a>
         <a href="#quality">Quality</a>
@@ -395,14 +411,10 @@
       const hero = document.querySelector(".hero");
 
       function updateHeaderBackground() {
-        const desktop = window.matchMedia(
-          "(min-width: 1100px)"
-        ).matches;
-
         const heroBottom = hero.getBoundingClientRect().bottom;
         const headerHeight = header.offsetHeight;
 
-        const overHero = desktop && heroBottom > headerHeight;
+        const overHero = heroBottom > headerHeight;
 
         header.classList.toggle("over-hero", overHero);
       }
@@ -415,6 +427,47 @@
       window.addEventListener("load", updateHeaderBackground);
 
       updateHeaderBackground();
+      const menuButton = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector(".nav-links");
+
+      function setMenuOpen(open) {
+        header.classList.toggle("menu-open", open);
+
+        menuButton.setAttribute("aria-expanded", String(open));
+
+        menuButton.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
+        );
+      }
+
+      menuButton.addEventListener("click", () => {
+        const currentlyOpen =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        setMenuOpen(!currentlyOpen);
+      });
+
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          setMenuOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          header.classList.contains("menu-open")
+        ) {
+          setMenuOpen(false);
+          menuButton.focus();
+        }
+      });
+
+      window.matchMedia("(min-width: 1100px)")
+        .addEventListener("change", () => {
+          setMenuOpen(false);
+        });
     </script>
   </body>
 </html>
