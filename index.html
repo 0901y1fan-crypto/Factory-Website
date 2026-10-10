@@ -27,34 +27,33 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="quote-button" href="#contact">Get a Quote</a>
+      <a class="quote-button" href="#contact">Contact Us</a>
     </header>
     <main>
       <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="FactoryPics/testimage.jpg"
+          alt="Garment factory production floor"
+        >
+
         <div class="hero-content">
           <p class="eyebrow">
-            OEM / ODM apparel manufacturing in Guangzhou
+            Garment sourcing and production
           </p>
 
           <h1 id="hero-title">
-            Your trusted garment manufacturing partner.
+            From your design to finished garments.
           </h1>
 
           <p class="hero-copy">
-            From first sample to finished shipment, we help fashion brands
-            produce reliable garments with disciplined quality control,
-            clear communication, and competitive lead times.
+            We help clothing brands source materials and coordinate
+            production with independent garment factories.
           </p>
 
-          <div class="hero-actions">
-            <a class="primary-action" href="#services">
-              Explore services
-            </a>
-
-            <a class="secondary-action" href="#contact">
-              Request quotation
-            </a>
-          </div>
+          <a class="primary-action" href="#contact">
+            Contact Us
+          </a>
         </div>
       </section>
       <section id="services" class="section services" aria-label="Services">
@@ -320,44 +319,43 @@
       </section>
       <section id="contact" class="section contact" aria-label="Contact us">
         <div class="contact-copy">
-          <p class="eyebrow">Get in touch</p>
+          <p class="eyebrow">Start a project</p>
 
-          <h2>Let’s discuss your next project.</h2>
+          <h2>Tell us what you want to produce.</h2>
 
-          <p>
-            Share your designs, quantities, and timeline.
-            We can discuss the next steps for your garments.
+          <p class="contact-intro">
+            Send your design reference, garment category, quantity target,
+            fabric preference, size range, and timeline. We will reply
+            with the next steps for sampling or quotation.
           </p>
 
           <div class="contact-details">
-            <p><strong>Email:</strong> To be confirmed</p>
-            <p><strong>Phone:</strong> To be confirmed</p>
-            <p><strong>Location:</strong> To be confirmed</p>
+            <p class="contact-detail">Email: To be confirmed</p>
+            <p class="contact-detail">Phone: To be confirmed</p>
           </div>
         </div>
 
         <form class="quote-form" aria-label="Request a quote">
-          <h3>Request a quote</h3>
-          <p class="form-note">All fields are required.</p>
-
           <div class="form-field">
-            <label for="contact-name">Your name</label>
+            <label for="contact-name">Name</label>
             <input
               type="text"
               id="contact-name"
               name="customer_name"
               autocomplete="name"
+              placeholder="Your name"
               required
             >
           </div>
 
           <div class="form-field">
-            <label for="contact-email">Email address</label>
+            <label for="contact-email">Email</label>
             <input
               type="email"
               id="contact-email"
               name="email"
               autocomplete="email"
+              placeholder="you@example.com"
               required
             >
           </div>
@@ -368,13 +366,10 @@
               id="contact-message"
               name="message"
               rows="5"
+              placeholder="Tell us garment type, quantity, materials, and target timeline"
               required
             ></textarea>
           </div>
-
-          <p class="form-note">
-            This form is a preview. Sending enquiries is not available yet.
-          </p>
 
           <button class="quote-submit" type="submit" disabled>
             Send enquiry
@@ -395,5 +390,31 @@
 
       <a href="#top">Back to top</a>
     </footer>
+    <script>
+      const header = document.querySelector(".site-header");
+      const hero = document.querySelector(".hero");
+
+      function updateHeaderBackground() {
+        const desktop = window.matchMedia(
+          "(min-width: 1100px)"
+        ).matches;
+
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const headerHeight = header.offsetHeight;
+
+        const overHero = desktop && heroBottom > headerHeight;
+
+        header.classList.toggle("over-hero", overHero);
+      }
+
+      window.addEventListener("scroll", updateHeaderBackground, {
+        passive: true
+      });
+
+      window.addEventListener("resize", updateHeaderBackground);
+      window.addEventListener("load", updateHeaderBackground);
+
+      updateHeaderBackground();
+    </script>
   </body>
 </html>
