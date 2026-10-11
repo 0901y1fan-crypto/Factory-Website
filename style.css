@@ -103,18 +103,26 @@ a {
 
 .hero {
   position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 100px;
+  overflow: hidden;
 }
 
 .hero-image {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  z-index: 1;
   width: min(100%, 760px);
   padding: clamp(20px, 4vw, 64px);
 }
