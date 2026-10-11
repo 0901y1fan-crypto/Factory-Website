@@ -605,10 +605,10 @@ html {
   background: currentColor;
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 900px) {
   .site-header {
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    flex-wrap: nowrap;
     padding: 12px 16px;
     gap: 12px;
   }
@@ -626,10 +626,8 @@ html {
     margin-left: auto;
   }
 
-  .site-header {
-  flex-wrap: nowrap;
-  padding: 12px 16px;
-  gap: 12px;
+  .site-header .quote-button {
+    display: none;
   }
 
   .nav-links {
