@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Garmour Apparel</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+  </head>
+
+  <body class="contact-page" id="top">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img
+          class="brand-logo"
+          src="FactoryPics/logo.svg"
+          alt="Garmour Apparel"
+        >
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav
+        id="primary-navigation"
+        class="nav-links"
+        aria-label="Primary navigation"
+      >
+        <a href="index.html#services">SERVICES</a>
+        <a href="index.html#factory">FACTORY</a>
+        <a href="index.html#quality">QUALITY</a>
+        <a href="index.html#process">PROCESS</a>
+        <a href="contact.html" aria-current="page">CONTACT</a>
+      </nav>
+
+      <a class="quote-button" href="contact.html">CONTACT US</a>
+    </header>
+    <main class="contact-main">
+      <h1>Tell us about your next collection.</h1>
+
+      <p>
+        Share your ideas, designs, or questions.
+        We’ll help you explore the next steps.
+      </p>
+    </main>
+    <script>
+        const header = document.querySelector(".site-header");
+        const menuButton = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector(".nav-links");
+
+        function setMenuOpen(open) {
+            header.classList.toggle("menu-open", open);
+
+            menuButton.setAttribute("aria-expanded", String(open));
+
+            menuButton.setAttribute(
+            "aria-label",
+            open ? "Close navigation menu" : "Open navigation menu"
+            );
+        }
+
+        menuButton.addEventListener("click", () => {
+            const currentlyOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+            setMenuOpen(!currentlyOpen);
+        });
+
+        navigation.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+            setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (
+            event.key === "Escape" &&
+            header.classList.contains("menu-open")
+            ) {
+            setMenuOpen(false);
+            menuButton.focus();
+            }
+        });
+
+        window.matchMedia("(max-width: 900px)")
+            .addEventListener("change", () => {
+            setMenuOpen(false);
+            });
+    </script>
+  </body>
+</html>
