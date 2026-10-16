@@ -63,7 +63,7 @@ a {
   color: #ffffff;
   border-radius: 0;
 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 450;
 }
 
@@ -82,7 +82,7 @@ a {
   background: #ffffff;
   color: black;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 750;
 }
 
@@ -152,7 +152,7 @@ a {
   min-height: 44px;
   padding: 13px 20px;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 750;
 }
 
@@ -537,7 +537,7 @@ img {
   gap: 24px;
 
   padding: 28px clamp(20px, 5vw, 72px);
-  background: #0e1b2c;
+  background: #a13a33;
   color: #dfe7ee;
   font-size: 14px;
 }
