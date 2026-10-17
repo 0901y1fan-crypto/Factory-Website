@@ -26,3 +26,123 @@
 .contact-page .site-header {
   position: sticky;
 }
+
+.enquiry-form {
+  display: grid;
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.enquiry-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.enquiry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.enquiry-field label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.enquiry-field input,
+.enquiry-field select,
+.enquiry-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 0;
+
+  border: 0;
+  border-bottom: 1px solid #a13a33;
+  border-radius: 0;
+
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+@media (max-width: 600px) {
+  .enquiry-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.enquiry-field textarea {
+  resize: vertical;
+}
+
+.enquiry-field textarea::placeholder {
+  color: #737373;
+  opacity: 1;
+}
+
+.enquiry-field .enquiry-help {
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+.enquiry-field input[type="file"]::file-selector-button {
+  margin-right: 16px;
+  padding: 10px 16px;
+
+  border: 0;
+  border-radius: 0;
+  background: #a13a33;
+  color: #ffffff;
+
+  font: inherit;
+  cursor: pointer;
+}
+
+.enquiry-field input:focus,
+.enquiry-field select:focus,
+.enquiry-field textarea:focus {
+  outline: none;
+  border-bottom-width: 3px;
+  padding-bottom: 12px;
+}
+
+.enquiry-field .enquiry-error {
+  margin: 0;
+  font-size: 14px;
+  color: #a13a33;
+}
+
+.enquiry-error:empty {
+  display: none;
+}
+
+.enquiry-submit {
+  width: fit-content;
+  justify-self: start;
+  min-height: 52px;
+  padding: 16px 24px;
+
+  border: 0;
+  border-radius: 0;
+  background: #a13a33;
+  color: #ffffff;
+
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.enquiry-submit:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.contact-page .site-footer p {
+  color: #ffffff;
+}

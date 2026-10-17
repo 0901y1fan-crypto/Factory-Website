@@ -1,107 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | Garmour Apparel</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    >
+  <title>Contact Us | Garmour Apparel</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-  <body class="contact-page" id="top">
-    <header class="site-header">
-      <a class="brand" href="index.html">
-        <img
-          class="brand-logo"
-          src="FactoryPics/logo.svg"
-          alt="Garmour Apparel"
-        >
-      </a>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+<body class="contact-page" id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="FactoryPics/logo.svg" alt="Garmour Apparel">
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation"
+      aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-navigation" class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#services">SERVICES</a>
+      <a href="index.html#factory">FACTORY</a>
+      <a href="index.html#quality">QUALITY</a>
+      <a href="index.html#process">PROCESS</a>
+      <a href="contact.html" aria-current="page">CONTACT</a>
+    </nav>
+
+    <a class="quote-button" href="contact.html">CONTACT US</a>
+  </header>
+  <main class="contact-main">
+    <h1>TELL US ABOUT YOUR NEXT COLLECTION</h1>
+
+    <p>
+      Share your ideas, designs, or questions.
+      We’ll help you explore the next steps.
+    </p>
+    <form class="enquiry-form">
+      <div class="enquiry-field">
+        <label for="enquiry-email">Email</label>
+
+        <input type="email" id="enquiry-email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="enquiry-row">
+        <div class="enquiry-field">
+          <label for="enquiry-name">Name</label>
+
+          <input type="text" id="enquiry-name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="enquiry-field">
+          <label for="enquiry-country">Country</label>
+
+          <input type="text" id="enquiry-country" name="country" autocomplete="country-name" required>
+        </div>
+      </div>
+      <div class="enquiry-row">
+        <div class="enquiry-field">
+          <label for="enquiry-phone">Phone number</label>
+
+          <input type="tel" id="enquiry-phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="enquiry-field">
+          <label for="enquiry-brand">Brand name</label>
+
+          <input type="text" id="enquiry-brand" name="brand_name" autocomplete="organization">
+        </div>
+      </div>
+
+      <div class="enquiry-field">
+        <label for="enquiry-website">Website</label>
+
+        <input type="url" id="enquiry-website" name="website" autocomplete="url" placeholder="https://yourbrand.com">
+      </div>
+
+      <div class="enquiry-field">
+        <label for="enquiry-type">Which best describes you?</label>
+
+        <select id="enquiry-type" name="enquiry_type">
+          <option value="">Select an option</option>
+
+          <option value="ready-to-start">
+            I have designs and I'm ready to start right away
+          </option>
+
+          <option value="design-assistance">
+            I need assistance with design
+          </option>
+
+          <option value="general-enquiry">
+            I have other enquiries and am exploring options
+          </option>
+        </select>
+      </div>
+      <div class="enquiry-field">
+        <label for="enquiry-message">Tell us more about your project</label>
+
+        <textarea id="enquiry-message" name="message" rows="5"
+          placeholder="Uploading your designs and specifications will greatly help us with your enquiry"></textarea>
+      </div>
+
+      <div class="enquiry-field">
+        <label for="enquiry-files">Upload your files</label>
+
+        <input type="file" id="enquiry-files" name="attachments[]" multiple aria-describedby="enquiry-file-help enquiry-file-error">
+
+        <p class="enquiry-help" id="enquiry-file-help">
+          Max 5 files, 10MB each, 25MB total
+        </p>
+        <p class="enquiry-error" id="enquiry-file-error" role="alert"></p>
+      </div>
+      <button class="enquiry-submit" type="submit" disabled>
+        SEND
       </button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <strong>Garmour Apparel</strong>
+      <p>Garment sourcing and production support.</p>
+    </div>
 
-      <nav
-        id="primary-navigation"
-        class="nav-links"
-        aria-label="Primary navigation"
-      >
-        <a href="index.html#services">SERVICES</a>
-        <a href="index.html#factory">FACTORY</a>
-        <a href="index.html#quality">QUALITY</a>
-        <a href="index.html#process">PROCESS</a>
-        <a href="contact.html" aria-current="page">CONTACT</a>
-      </nav>
+    <p>&copy; 2026 Garmour Apparel.</p>
 
-      <a class="quote-button" href="contact.html">CONTACT US</a>
-    </header>
-    <main class="contact-main">
-      <h1>Tell us about your next collection.</h1>
+    <a href="#top">Back to top</a>
+  </footer>
+  <script>
+    const header = document.querySelector(".site-header");
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".nav-links");
 
-      <p>
-        Share your ideas, designs, or questions.
-        We’ll help you explore the next steps.
-      </p>
-    </main>
-    <script>
-        const header = document.querySelector(".site-header");
-        const menuButton = document.querySelector(".menu-toggle");
-        const navigation = document.querySelector(".nav-links");
+    function setMenuOpen(open) {
+      header.classList.toggle("menu-open", open);
 
-        function setMenuOpen(open) {
-            header.classList.toggle("menu-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
 
-            menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute(
+        "aria-label",
+        open ? "Close navigation menu" : "Open navigation menu"
+      );
+    }
 
-            menuButton.setAttribute(
-            "aria-label",
-            open ? "Close navigation menu" : "Open navigation menu"
-            );
-        }
+    menuButton.addEventListener("click", () => {
+      const currentlyOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
 
-        menuButton.addEventListener("click", () => {
-            const currentlyOpen =
-            menuButton.getAttribute("aria-expanded") === "true";
+      setMenuOpen(!currentlyOpen);
+    });
 
-            setMenuOpen(!currentlyOpen);
-        });
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        setMenuOpen(false);
+      }
+    });
 
-        navigation.addEventListener("click", (event) => {
-            if (event.target.closest("a")) {
-            setMenuOpen(false);
-            }
-        });
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        header.classList.contains("menu-open")
+      ) {
+        setMenuOpen(false);
+        menuButton.focus();
+      }
+    });
 
-        document.addEventListener("keydown", (event) => {
-            if (
-            event.key === "Escape" &&
-            header.classList.contains("menu-open")
-            ) {
-            setMenuOpen(false);
-            menuButton.focus();
-            }
-        });
+    window.matchMedia("(max-width: 900px)")
+      .addEventListener("change", () => {
+        setMenuOpen(false);
+      });
 
-        window.matchMedia("(max-width: 900px)")
-            .addEventListener("change", () => {
-            setMenuOpen(false);
-            });
-    </script>
-  </body>
+    const fileInput = document.querySelector("#enquiry-files");
+    const fileError = document.querySelector("#enquiry-file-error");
+
+    const maxFiles = 5;
+    const maxFileSize = 10 * 1000 * 1000;
+    const maxTotalSize = 25 * 1000 * 1000;
+
+    fileInput.addEventListener("change", () => {
+      const files = Array.from(fileInput.files);
+
+      let message = "";
+      let totalSize = 0;
+
+      for (const file of files) {
+        totalSize += file.size;
+      }
+
+      if (files.length > maxFiles) {
+        message = "Please select no more than 5 files.";
+      } else if (files.some((file) => file.size > maxFileSize)) {
+        message = "Each file must be 10 MB or smaller.";
+      } else if (totalSize > maxTotalSize) {
+        message = "Your files must total 25 MB or less.";
+      }
+
+      fileInput.setCustomValidity(message);
+      fileInput.setAttribute("aria-invalid", String(message !== ""));
+      fileError.textContent = message;
+    });
+  </script>
+</body>
+
 </html>
