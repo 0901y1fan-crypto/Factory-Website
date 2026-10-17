@@ -20,22 +20,20 @@
       <img class="brand-logo" src="FactoryPics/logo.svg" alt="Garmour Apparel">
     </a>
 
+    <nav id="primary-navigation" class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#services">SERVICES</a>
+      <a href="index.html#factory">FACTORY</a>
+      <a href="index.html#quality">QUALITY</a>
+      <a href="index.html#process">PROCESS</a>
+    </nav>
+
+    <a class="quote-button" href="contact.html" aria-current="page">CONTACT US</a>
     <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation"
       aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </button>
-
-    <nav id="primary-navigation" class="nav-links" aria-label="Primary navigation">
-      <a href="index.html#services">SERVICES</a>
-      <a href="index.html#factory">FACTORY</a>
-      <a href="index.html#quality">QUALITY</a>
-      <a href="index.html#process">PROCESS</a>
-      <a href="contact.html" aria-current="page">CONTACT</a>
-    </nav>
-
-    <a class="quote-button" href="contact.html">CONTACT US</a>
   </header>
   <main class="contact-main">
     <h1>TELL US ABOUT YOUR NEXT COLLECTION</h1>
@@ -113,7 +111,8 @@
       <div class="enquiry-field">
         <label for="enquiry-files">Upload your files</label>
 
-        <input type="file" id="enquiry-files" name="attachments[]" multiple aria-describedby="enquiry-file-help enquiry-file-error">
+        <input type="file" id="enquiry-files" name="attachments[]" multiple
+          aria-describedby="enquiry-file-help enquiry-file-error">
 
         <p class="enquiry-help" id="enquiry-file-help">
           Max 5 files, 10MB each, 25MB total
@@ -149,6 +148,10 @@
         "aria-label",
         open ? "Close navigation menu" : "Open navigation menu"
       );
+
+      if (open) {
+        navigation.querySelector("a").focus();
+      }
     }
 
     menuButton.addEventListener("click", () => {
@@ -174,7 +177,7 @@
       }
     });
 
-    window.matchMedia("(max-width: 900px)")
+    window.matchMedia("(max-width: 1200px)")
       .addEventListener("change", () => {
         setMenuOpen(false);
       });

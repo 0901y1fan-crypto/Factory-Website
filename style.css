@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 24px;
 
   padding: 16px 24px;
@@ -51,12 +51,13 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 30px;
 }
 
 .nav-links a {
   display: inline-flex;
+  white-space: nowrap;
   align-items: center;
   padding: 13px 20px;
 
@@ -78,6 +79,9 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-height: 44px;
 
   padding: 13px 20px;
   background: #ffffff;
@@ -599,16 +603,10 @@ html {
   background: currentColor;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .site-header {
-    position: fixed;
-    flex-wrap: nowrap;
     padding: 12px 16px;
     gap: 12px;
-  }
-
-  .brand strong {
-    font-size: clamp(12px, 3.6vw, 15px);
   }
 
   .menu-toggle {
@@ -617,11 +615,10 @@ html {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-left: auto;
   }
 
   .site-header .quote-button {
-    display: none;
+    margin-left: auto;
   }
 
   .nav-links {
@@ -630,10 +627,12 @@ html {
     top: 100%;
     left: 0;
     right: 0;
+
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     padding: 8px 16px;
+
     background: #a13a33;
     border-bottom: 1px solid transparent;
   }
@@ -647,5 +646,21 @@ html {
     align-items: center;
     min-height: 44px;
     padding: 10px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: clamp(128px, 32vw, 150px);
+  }
+
+  .quote-button {
+    padding: 12px 10px;
+    font-size: 12px;
   }
 }
